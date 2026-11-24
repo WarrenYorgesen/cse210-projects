@@ -3,10 +3,10 @@ using System.Diagnostics;
 
 public class Entry
 {
-    public string EntryString;
-    public string Date;
-    public string Time;
-    public string Prompt;
+    public string _EntryString;
+    public string _Date;
+    public string _Time;
+    public string _Prompt;
 
 
     public List<string> promptList = ["What was your favorite thing you did today?",
@@ -19,14 +19,14 @@ public class Entry
     
     public List<string> newEntry()
     {
-        Prompt = generatePrompt();
-        Console.WriteLine(Prompt);
-        EntryString = Console.ReadLine();
-        Date = getDate();
-        Time = getTime();
+        _Prompt = generatePrompt();
+        Console.WriteLine(_Prompt);
+        _EntryString = Console.ReadLine();
+        _Date = getDate();
+        _Time = getTime();
 
         //List<string> entryList = convertToList(Date, Time, Prompt, EntryString);
-        List<string> entryList = [Date, Time, Prompt, EntryString];
+        List<string> entryList = [_Date, _Time, _Prompt, _EntryString];
         return entryList;
     }
 

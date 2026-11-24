@@ -32,7 +32,7 @@ class Program
             {
                 Console.Write("What is the filename you want to save to? (ex:journal.txt) : ");
                 string file = Console.ReadLine();
-                fileManage.save(file, journal.entryList);
+                fileManage.save(file, journal._entryList);
             }
             else if (choice == 4)
             {
@@ -46,7 +46,7 @@ class Program
                     string file = Console.ReadLine();
                     if (fileManage.load(file) != null)
                     {
-                        journal.entryList = fileManage.load(file);
+                        journal._entryList = fileManage.load(file);
                     }
                 }
             }
@@ -58,7 +58,7 @@ class Program
                 confirmChoice = int.Parse(Console.ReadLine());
                 if (confirmChoice == 1)
                 {
-                    journal.entryList.Clear();
+                    journal._entryList.Clear();
                 }
             }
             else if (choice == 6)
